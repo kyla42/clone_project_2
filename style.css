@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+
+:root {
+    --font-size-sm: 1.8rem;
+    --font-size-md: 3.8rem;
+    --font-size-lg: 5rem;
+    --font-size-res: 2.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--font-size-sm);
+    font-family: 'Noto Serif JP', serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.title {
+    font-size: var(--font-size-md);
+}
+
+/* hero */
+.hero {
+    position: relative;
+    width: auto;
+    height: 75rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-image: url(./img/main.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem 0rem;
+    background-color: transparent;
+
+}
+
+.logo img {
+    width: 14rem;
+}
+
+.commands ul {
+    display: flex;
+    gap: 5rem;
+}
+
+.commands a:hover {
+    opacity: 0.6;
+}
+
+.commands-icon {
+    display: none;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-lg);
+}
+
+@media (max-width: 960px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .logo img {
+        width: 10rem;
+    }
+
+    .hero .commands ul {
+        display: none;
+    }
+
+    .commands-icon {
+        display: block;
+    }
+
+    .main {
+        font-size: var(--font-size-res);
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+}
+
+/* info */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0 10rem;
+}
+
+.info-title {
+    padding-top: 3rem;
+}
+
+.info .updates {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.update {
+    display: flex;
+    justify-content: start;
+    padding: 3rem 8rem 3rem 0;
+    border-bottom: 1px solid black;
+}
+
+.update a {
+    text-align: start;
+}
+
+.update a:hover {
+    opacity: 0.6;
+}
+
+.update span.square {
+    font-size: 1rem;
+    border: 0.5px solid black;
+    padding: 0.7rem;
+    margin: 0 2rem;
+}
+
+@media (max-width: 960px) {
+    .info {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: var(--font-size-res);
+    }
+
+    .info .updates {
+        padding-top: 2rem;
+        width: 100%;
+    }
+
+    .update a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .update span.upper {
+        font-size: 1.3rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* sample */
+
+.example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0 7rem;
+}
+
+.example-title {
+    padding: 3rem;
+}
+
+.samples {
+    padding-top: 4rem;
+    display: flex;
+}
+
+.sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.sample .building {
+    width: 43rem;
+}
+
+.sample .name {
+    font-size: 2.4rem;
+    padding: 1.6rem 0;
+}
+
+.sample .place {
+    font-size: 1.4rem;
+}
+
+.sample .more {
+    width: 34rem;
+    height: auto;
+    padding: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.sample .more:hover {
+    opacity: 0.6;
+}
+
+.sample-title {
+    padding-top: 5rem;
+}
+
+.sample-list {
+    font-size: 2rem;
+    padding: 1rem 5rem;
+    border: 1px solid black;
+    margin: 4rem 0;
+    transition: all 0.3s ease;
+}
+
+.sample-list:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 960px) {
+    .example {
+        padding: 5rem 0 0;
+    }
+
+    .example-title {
+        padding-bottom: 0;
+    }
+
+    .samples {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sample .building {
+        width: 100%;
+        padding-top: 4rem;
+    }
+}
+
+/* others */
+.others {
+    margin-top: 6rem;
+    display: flex;
+}
+
+.others a {
+    height: none;
+}
+
+.others img {
+    max-width: 100%;
+    margin-bottom: -0.5rem;
+    transition: all 0.3s ease;
+}
+
+.others img:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 960px) {
+    .others {
+        display: block;
+    }
+}
+
+/* footer */
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: transparent;
+}
+
+.copy {
+    font-size: 0.5rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 960px) {
+    footer .navbar {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    footer .navbar .commands {
+        padding-bottom: 5rem;
+    }
+
+    footer .logo {
+        text-align: center;
+    }
+
+    footer .commands ul {
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 3rem;
+    }
+
+    .copy {
+        padding-top: 0;
+    }
+
+}
+
+/* 960 */
